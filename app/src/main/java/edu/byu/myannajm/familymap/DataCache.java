@@ -56,7 +56,9 @@ public class DataCache {
         List<person> immediateFamily = new ArrayList<>();
         for(person person : allFamilyMembers){
             if(Objects.equals(person.getSpouseID(), personID) || Objects.equals(person.getFatherID(), personID) || Objects.equals(person.getMotherID(), personID)){
-                immediateFamily.add(person);
+                if(!immediateFamily.contains(person)){
+                    immediateFamily.add(person);
+                }
             }
             if((fatherID != null && Objects.equals(person.getPersonID(), fatherID)) || (motherID != null && Objects.equals(person.getPersonID(), motherID))){
                 immediateFamily.add(person);
@@ -108,9 +110,6 @@ public class DataCache {
             }
         }
     }
-    protected static void addToPeople(String personID, person person){
-        familyMembers.put(personID, person);
-    }
     protected static person findPerson(String personID){
         return familyMembers.get(personID);
     }
@@ -133,7 +132,7 @@ public class DataCache {
         maternalAncestors.clear();
         spouseChecked = true;
         lifeStoryChecked = true;
-        familyTreeChecked =false;
+        familyTreeChecked =true;
         maleChecked = true;
         femaleChecked = true;
         fatherChecked = true;
@@ -192,4 +191,5 @@ public class DataCache {
             setMotherAncestors(mother);
         }
     }
+
 }
