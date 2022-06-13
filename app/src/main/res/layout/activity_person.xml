@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/personLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:id="@+id/firstLabel">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:id="@+id/personFirstName"
+            android:text="firstName"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="13sp"
+            android:id="@+id/personFirstNameTxt"
+            android:text="@string/firstNameString"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/personLastName"
+            android:text="lastName"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="13sp"
+            android:id="@+id/personLastNameTxt"
+            android:text="@string/lastNameString"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/personGender"
+            android:text="female"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textSize="13sp"
+            android:id="@+id/personGenderTxt"
+            android:text="@string/genderString"
+            />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/expandableListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft">
+
+    </ExpandableListView>
+
+
+</RelativeLayout>
